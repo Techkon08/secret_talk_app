@@ -1,73 +1,51 @@
-# React + TypeScript + Vite
+🔐 Secret Talk — Real-Time Anonymous Chat App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Secret Talk is a simple and fast real-time anonymous chat application.
+No login required — just enter a username, join a room and start chatting instantly!
+Built with React + TypeScript + Socket.IO + Node.js + Express.
 
-Currently, two official plugins are available:
+🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+📡 Real-time messaging using WebSockets (Socket.IO)
+🔑 Anonymous chat — no signup needed
+🔐 Private rooms with unique room IDs
+⚡ Instant delivery with live user-joined notifications
+🌐 Deployed frontend on Vercel
+☁ Backend server hosted on Render
+🖥️ Built with TypeScript for safety and scalability
 
-## React Compiler
+🛠️ Tech Stack
+Layer	Tools Used
+Frontend	React, TypeScript, Vite, CSS
+Backend	Node.js, Express, Socket.IO, TypeScript
+Deployment	Vercel (client), Render (server)
+📦 Setup & Run Locally
+# Clone the repository
+git clone https://github.com/<your-username>/secret-talk.git
+cd secret-talk
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Install Client
+cd client
+npm install
+npm run dev
 
-## Expanding the ESLint configuration
+Install Server
+cd server
+npm install
+npm run dev
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+🌍 Live Demo
+Frontend: https://secret-talk-app.vercel.app
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+📌 Future Enhancements
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+🔔 Typing indicator
+👥 Show online users in room
+🧹 Auto cleanup inactive rooms
+📱 Better mobile UI
+🔒 Optional password for rooms
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+🤝 Contributions
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Contributions and ideas are welcome!
+Fork the repo → Create a branch → Submit a PR 🚀
